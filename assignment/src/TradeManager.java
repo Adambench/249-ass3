@@ -10,7 +10,7 @@ public class TradeManager {
         TariffList tariffList2;
 
         // Step 1: Read from Tariffs.txt and populate tariffList1 (no duplicates)
-        try (BufferedReader br = new BufferedReader(new FileReader("Tariffs.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("../../Tariffs.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] parts = line.trim().split(" ");
@@ -33,13 +33,13 @@ public class TradeManager {
 
         // Step 3: Read TradeRequests.txt into ArrayList
         ArrayList<String> tradeRequests = new ArrayList<>();
-        try (BufferedReader br2 = new BufferedReader(new FileReader("TradeRequests.txt"))) {
+        try (BufferedReader br2 = new BufferedReader(new FileReader("../../TradeRequest.txt"))) {
             String line;
             while ((line = br2.readLine()) != null) {
                 tradeRequests.add(line.trim());
             }
         } catch (IOException e) {
-            System.err.println("Error reading TradeRequests.txt: " + e.getMessage());
+            System.err.println("Error reading TradeRequest.txt: " + e.getMessage());
         }
 
         // Step 4: Process each trade request
@@ -118,7 +118,7 @@ public class TradeManager {
             System.out.println("Deleted from start.");
 
             Tariff replaceTariff = new Tariff("Brazil", "USA", "Agriculture", 5.0);
-            tariffList1.replaceAtIndex(replaceTariff, 0);
+            tariffList1.replaceAtIndex(0, replaceTariff);
             System.out.println("Replaced at index 0 with: " + replaceTariff);
         } catch (NoSuchElementException e) {
             System.out.println("Error with index-based operation: " + e.getMessage());
