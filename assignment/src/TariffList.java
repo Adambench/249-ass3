@@ -171,9 +171,6 @@ public class TariffList implements TariffPolicy {
             this.next = next;
         }
 
-
-
     }
 
-    
 }
