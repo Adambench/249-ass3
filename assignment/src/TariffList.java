@@ -13,8 +13,13 @@ public class TariffList implements TariffPolicy {
 
 
     public TariffList(TariffList tariffList){
-        this.head = new TariffNode(tariffList.head);
-        this.size = tariffList.size;
+        if(tariffList == null || tariffList.head == null){
+            this.head = null;
+            this.size = 0;
+        } else{
+            this.head = new TariffNode(tariffList.head);
+            this.size = tariffList.size;
+        }
     }
     
     public void addToStart(Tariff tariff){
