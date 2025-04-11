@@ -10,7 +10,7 @@ public class TradeManager {
         TariffList tariffList2;
 
         // Step 1: Read from Tariffs.txt and populate tariffList1 (no duplicates)
-        try (BufferedReader br = new BufferedReader(new FileReader("../../Tariffs.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("Tariffs.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] parts = line.trim().split(" ");
@@ -33,7 +33,7 @@ public class TradeManager {
 
         // Step 3: Read TradeRequests.txt into ArrayList
         ArrayList<String> tradeRequests = new ArrayList<>();
-        try (BufferedReader br2 = new BufferedReader(new FileReader("../../TradeRequest.txt"))) {
+        try (BufferedReader br2 = new BufferedReader(new FileReader("TradeRequest.txt"))) {
             String line;
             while ((line = br2.readLine()) != null) {
                 tradeRequests.add(line.trim());
