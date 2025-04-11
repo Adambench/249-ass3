@@ -121,8 +121,15 @@ public class TariffList implements TariffPolicy {
 
     @Override
     public String evaluateTrade(double proposedTariff, double minimumTariff) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    if (proposedTariff >= minimumTariff) {
+        return "accepted";
+    } else if (proposedTariff >= 0.8 * minimumTariff) {
+        return "conditionally accepted";
+    } else {
+        return "rejected";
     }
+}
+
 
 
 
