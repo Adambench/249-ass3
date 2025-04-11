@@ -2,7 +2,7 @@ public class Tariff {
     private String destinationCountry;
     private String originCountry;
     private String productCategory;
-    private double minimumTariff;   
+    private double minimumTariff;
 
 
     public Tariff(String destinationCountry, String originCountry, String productCategory, double minimumTariff) {
