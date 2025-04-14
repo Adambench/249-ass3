@@ -1,3 +1,17 @@
+/*
+Assignment 3
+Question : Part 1 
+Written by: Mountaga Sy 40312584 and Adam Benchekroun 40306874
+
+This class represents a product with its name, country of origin, category, and price.
+It includes methods to get and set these attributes, as well as a method to calculate 
+the updated price based on the country and category of the product.
+
+ */
+
+
+
+
 public class Product {
     private String name; // Product name
     private String country; // Product country of origin

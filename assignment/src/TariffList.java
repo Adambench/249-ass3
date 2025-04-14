@@ -1,4 +1,22 @@
 
+/*
+Assignment 3
+Question : Part 2
+Written by: Mountaga Sy 40312584 and Adam Benchekroun 40306874
+
+Class description:
+This class represents a list of Tariff objects. It provides methods to add, remove, 
+and manipulate Tariff objects in the list. It also provides methods to find a specific 
+Tariff based on its attributes and to check if a Tariff exists in the list. The class 
+implements the TariffPolicy interface, which defines a method for evaluating trade 
+based on proposed and minimum tariffs. This class is used to manage a list of tariffs, 
+allowing for operations such as adding, removing, and finding tariffs based on specific 
+criteria.
+
+*/
+
+
+
 import java.util.NoSuchElementException;
 
 public class TariffList implements TariffPolicy {

@@ -1,3 +1,22 @@
+/*
+Assignment 3
+Question : Part 2
+Written by: Mountaga Sy 40312584 and Adam Benchekroun 40306874
+
+ckass description:
+
+This class is the main entry point for the TradeManager application. It handles reading tariff data 
+from a file, processing trade requests, and managing tariffs using the TariffList class. It also provides 
+a user interface for searching tariffs and testing various methods of the TariffList class.
+
+It includes error handling for file reading and user input, and it demonstrates the functionality of the 
+TariffList class by performing various operations such as insertion, deletion, and searching for tariffs. 
+The program also evaluates trade requests based on proposed tariffs and minimum tariffs, providing feedback 
+to the user.
+
+*/
+
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -1,3 +1,16 @@
+
+/*
+Assignment 3
+Question : Part 1 
+Written by: Mountaga Sy 40312584 and Adam Benchekroun 40306874
+
+This program reads a file containing product data, processes the data to update the prices
+based on the country and category of each product, and then writes the updated product data
+to a new file. The program also sorts the products alphabetically by name before writing 
+them to the output file.
+ */
+
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;

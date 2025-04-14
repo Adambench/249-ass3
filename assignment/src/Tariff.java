@@ -1,3 +1,16 @@
+/*
+Assignment 3
+Question : Part 2
+Written by: Mountaga Sy 40312584 and Adam Benchekroun 40306874
+
+This class represents a Tariff with attributes for destination country, origin country, 
+product category, and minimum tariff.
+
+
+*/
+
+
+
 public class Tariff {
     private String destinationCountry;
     private String originCountry;
