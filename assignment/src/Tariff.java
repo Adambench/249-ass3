@@ -71,7 +71,6 @@ public class Tariff {
         return new Tariff(destinationCountry, originCountry, productCategory, minimumTariff);
     }
 
-    
 
 
 }

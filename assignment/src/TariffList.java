@@ -11,6 +11,13 @@ public class TariffList implements TariffPolicy {
         this.size = 0;
     }
 
+    public void printTariffList() {
+        TariffNode current = this.head;
+        while (current != null) {
+            System.out.println(current.getTariff());
+            current = current.getNext();
+        }
+    }
 
     public TariffList(TariffList tariffList){
         if(tariffList == null || tariffList.head == null){
@@ -37,7 +44,7 @@ public class TariffList implements TariffPolicy {
         }
 
         TariffNode current = this.head;
-        for(int i = 0; i < index; i++){
+        for(int i = 0; i < index-1; i++){
             current = current.next;
         }
         current.next = new TariffNode(tariff, current.next);

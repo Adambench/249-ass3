@@ -81,7 +81,7 @@ public class TradeManager {
 
         // Step 5: Prompt user to search tariffs
         Scanner sc = new Scanner(System.in);
-        System.out.println("\nEnter a few tariffs to search (or type 'exit' to quit):");
+        System.out.println("\nEnter a few tariffs to search (or type 'exit' to quit):");    
         while (true) {
             System.out.print("\nEnter Origin Country: ");
             String origin = sc.next();
@@ -102,28 +102,62 @@ public class TradeManager {
                 System.out.println("No matching tariff found.");
             }
         }
+        sc.close();
 
         // Step 6: Test methods and constructors
         System.out.println("\nTesting TariffList methods...");
 
         try {
-            Tariff testTariff = new Tariff("Germany", "Canada", "Automobile", 8.0);
+            System.out.println("TariffList1 Before Any Change : \n");
+            tariffList1.printTariffList();
+
+            Tariff testTariff = new Tariff("France", "Canada", "Automobile", 8.0);
             tariffList1.insertAtIndex(testTariff, 1);
-            System.out.println("Inserted at index 1: " + testTariff);
+            System.out.println("\n\nACTION : Inserted at index 1: " + testTariff);
+            System.out.println("\nTariffList1 After Insertion : \n");
+            tariffList1.printTariffList();
 
             tariffList1.deleteFromIndex(1);
-            System.out.println("Deleted from index 1.");
+            System.out.println("\n\nACTION : Deleted from index 1.");
+            System.out.println("\nTariffList1 After Deletion form index = 1 : \n");
+            tariffList1.printTariffList();
+
 
             tariffList1.deleteFromStart();
-            System.out.println("Deleted from start.");
+            System.out.println("\n\nACTION : Deleted from start.\n");
+            System.out.println("\nTariffList1 After Deletion from start (index = 0) : \n");
+            tariffList1.printTariffList();
 
             Tariff replaceTariff = new Tariff("Brazil", "USA", "Agriculture", 5.0);
             tariffList1.replaceAtIndex(0, replaceTariff);
-            System.out.println("Replaced at index 0 with: " + replaceTariff);
+            System.out.println("\n\n ACTION : Replaced at index 0 with: " + replaceTariff);
+            System.out.println("\nTariffList1 After Replacement at index 0 : \n");
+            tariffList1.printTariffList();
+
+
+            System.out.println("\n\nACTION : Trying to find Tariff: Brazil, USA, Agriculture");
+            TariffList.TariffNode foundNode = tariffList1.find("Brazil", "USA", "Agriculture");
+            if (foundNode != null) {
+                System.out.println("\nRESULT : Found Tariff: " + foundNode.getTariff());
+            } else {
+                System.out.println("\nRESULT : No matching tariff found.");
+            }
+
+            System.out.println("\n\nACTION : Trying to find Tariff: Country, Country, Category");
+            TariffList.TariffNode foundNode1 = tariffList1.find("Country", "Country", "Category");
+            if (foundNode1 != null) {
+                System.out.println("\nRESULT : Found Tariff: " + foundNode1.getTariff());
+            } else {
+                System.out.println("\nRESULT : No matching tariff found.");
+            }
+
         } catch (NoSuchElementException e) {
             System.out.println("Error with index-based operation: " + e.getMessage());
         }
 
-        System.out.println("\nAll tests complete.");
+        System.out.println("\nAll tests complete.");    
     }
 }
+
+
+
